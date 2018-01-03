@@ -91,7 +91,7 @@ mv -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 rm -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 ```
 
-Now we have some basic skills to start work with files.  Build a file structure for today's workshop.  The directories could look something like this (drawn on board/computer):
+Now we have some basic skills to start working with files.  Build a file structure for today's workshop.  The directories could look something like this (drawn on board/computer):
 
 
 
