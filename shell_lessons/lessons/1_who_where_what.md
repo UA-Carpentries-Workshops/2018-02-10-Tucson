@@ -14,7 +14,7 @@ This is what is called our Home Directory. Now let's make the leap into the comm
 
 ### *Command Line Navigation*
 
-Because the command line looks cryptic there are two things you can always do to orient yourself. `pwd` Stands for path working directory and shows the root to the current directory you are in from left to right.  Directories are indicated in the command line by a `/`.  The second command is `whoami` and will output the current user. 
+Because the command line looks cryptic there are two things you can always do to orient yourself. `pwd` Stands for print working directory and shows the root to the current directory you are in from left to right.  Directories are indicated in the command line by a `/`.  The second command is `whoami` and will output the current user. 
 
 ```bash
 pwd
@@ -25,40 +25,39 @@ whoami
 
 **The file structure shown using `pwd` can be thought of as a tree of files with branches and nodes.**
 
+What if we were not sure what `pwd` actually does?  For that we can use `--help` or `man`.  This will vary by operating system and `man` stand for manual.  Try using each of these commands with `pwd` on your system.  Note: the order of each of these commands.
+
+```bash
+pwd --help
+man pwd
+``` 
+
+Let's use some of these flags/options to see what they do.
+
+#### cd: Moving across directories
+Now that we know where we are lets ensure our GUI and command line are in the same directory.  To move directories we 'change directory' using `cd`. This is followed by some sort of direction for the computer.  For example: 
+
+```bash
+cd ../
+cd ~
+cd Documents/
+cd /Users/usrname/Documents
+cd
+```
+
+
 #### ls: Listing directory contents
-To show what is in the current directory we use `ls`. We can also give `ls` more direction to list the contents of other directories. 
+To show what is in the current directory we use list `ls`. We can also give `ls` more direction to list the contents of other directories. 
 
 ```bash
 ls
 ls Documents/
 ```
-Or change how we output the file contents using what are called flags.  Flags are options that command after a command and tell that application to do something specific that is not default. 
+Or change how we output the file contents using what are called flags.  Flags are options that command after a command and tell that application to do something specific that is not default.  How might we find out what these flags are and what they do?  Try some flags out that you find interesting. 
 
 ```bash
 ls -lh
 ls -lha Documents/
-```
-To learn more about program options you can type the command name and help `ls --help` or call the manual using `man ls`
-
-```bash
-man ls
-```  
-#### cd: Moving across directories
-Now that we know where we are lets ensure our GUI and command line are in the same directory.  To move directories we 'change directory' using `cd`. This is followed by some sort of direction for the computer.  For example: 
-
-```bash
-cd Documents/
-cd /Users/usrname/Documents
-```
-
-### *Viewing Files*
-There are a variety of ways to view files.  We will use a few of these methods to understand how they differ from each other.
-
-```bash
-cat [PATH/]FILENAME
-less [PATH/]FILENAME    -Hint: exit with 'q' key
-head [-number] [PATH/]FILENAME
-tail [-number] [PATH/]FILENAME
 ```
 
 ### Creating directories and files 
@@ -67,6 +66,19 @@ We create directories by using the make directory command `mkdir`.
 ```bash
 mkdir directory_name
 ```
+
+Now we have some basic skills to start working with files.  Build a file structure for today's workshop.  The directories could look something like this (drawn on board/computer):
+
+### *Viewing Files*
+There are a variety of ways to view files.  We will use a few of these methods to understand how they differ from each other. We will download a text file to the data directory to work with. 
+
+```bash
+cat [PATH/]FILENAME
+less [PATH/]FILENAME    -Hint: exit with 'q' key
+head [-number] [PATH/]FILENAME
+tail [-number] [PATH/]FILENAME
+```
+
 
 ##### Quick check (Etherpad)
 How can we check what is inside the directory?
@@ -90,8 +102,6 @@ cp -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 mv -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 rm -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 ```
-
-Now we have some basic skills to start working with files.  Build a file structure for today's workshop.  The directories could look something like this (drawn on board/computer):
 
 
 

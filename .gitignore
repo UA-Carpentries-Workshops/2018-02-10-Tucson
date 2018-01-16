@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#Misc files/notes
+shell_lessons/lessons/notes.txt
+
 # C extensions
 *.so
 
