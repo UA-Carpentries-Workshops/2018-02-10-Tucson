@@ -70,7 +70,7 @@ mkdir directory_name
 Now we have some basic skills to start working with files.  Build a file structure for today's workshop.  The directories could look something like this (drawn on board/computer):
 
 ### *Viewing Files*
-There are a variety of ways to view files.  We will use a few of these methods to understand how they differ from each other. We will download a text file to the data directory to work with. 
+There are a variety of ways to view files.  We will use a few of these methods to understand how they differ from each other. We will download a text file to the data directory to work with.  Download the file [here](https://github.com/UA-Carpentries-Workshops/2018-02-10-Tucson/blob/shell_lessons/shell_lessons/data/the_road_not_taken.txt). 
 
 ```bash
 cat [PATH/]FILENAME
@@ -79,6 +79,7 @@ head [-number] [PATH/]FILENAME
 tail [-number] [PATH/]FILENAME
 ```
 
+This may be a good time to introduce wildcards.
 
 ##### Quick check (Etherpad)
 How can we check what is inside the directory?
@@ -102,9 +103,3 @@ cp -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 mv -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 rm -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 ```
-
-
-
-
-    	
-
