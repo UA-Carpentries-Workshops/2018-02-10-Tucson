@@ -29,14 +29,14 @@ git config --global user.email my_email@gmail.com
 
 Next we need to initialize our repository so git knows to start tracking changes.  A git repository is essentially a data structure were you will begin tracking any changes made to files.  Cd to the top of this workshops file structure and initialize it with git.  
 
-** ls your this directory before you `git init` it and take note of what you see. **
+**ls this directory before you `git init` it and take note of what you see.**
 
 ```bash
 git init .
 ```  
 
 ##### Activity
-**ls this directory again.  What looks different?**
+**ls this directory again.  Does anything look different?**
 Post in the etherpad what changed.
 
 
@@ -105,13 +105,139 @@ git push
 
 Now go to your Github account in a browser and see if our repository was pushed correctly.
 
+#### Activity
+What is the difference between staging, committing, and pushing?
+
 
 ## Working with Data
 
+We have our repository up and running on Github, so now we can start working on that data we cloned!
 
-The .xlsx indicates that this file is a Microsoft Excel file.  Excel is a spreadsheet application with a GUI.  Let's open that file up using Excel or Numbers.
+```bash
+cd [PATH]/data/gapminder_data
+ls
+```
 
-Now try using our shell commands to view this file.  Do any work?
+If we look at our files we will notice a .xlsx file. .xlsx indicates that this file is a Microsoft Excel file.  Excel is a spreadsheet application with a GUI.  Let's open that file up using Excel or Numbers.  
 
+* This file contains data about GDP per capita and life expectancy
+* Take a look at how this data is organized
+* Is there anything wrong with this file?
+* We could edit this file in Excel but let's fix it using the command line
+
+#### Activity
+Now try using shell commands to view this file.  Do any of your methods work?
+
+
+We need to convert this file to a plain text file.  We can do this by saving the file to as .txt.
+File types commonly used in data analysis:
+	* .txt = text file or tab separated file
+	* .csv = comma separated file
+	* .tsv = tab separated file
+
+### Edit the new .txt file with nano
+
+```bash
+nano Afghanistan_raw.txt
+```
+
+
+
+## Preparing our raw data for downstream analysis
+
+We now have an idea of what the structure of our data should be. Move to `gapminder_by_country/` using shell commands.
+
+First we should check how many total lines of data are present.  We can do this using a wildcard `*`.  This wildcard means: match any character any number of time. This is quite handy when we might have 100's-1000's of files in a directory that we want to do the same operation on.  
+
+This also demonstrates that proper file naming schemes are crucial when managing data.
+
+```bash
+wc -l Afghanistan.cc.txt
+wc -l Afghanistan.cc.txt Chile.cc.txt
+wc -l *.cc.txt
+wc -l *
+```
+
+#### Activity
+Pick a country with your the first letter of your last name.  Put that country into the Etherpad along with your name and inspect the file with the country chosen for any errors.  Report any errors to the Etherpad. If you finish early pick a remaining country and inspect that file as well.
+
+The Etherpad should look like
+
+```bash
+country_name - student_name - error if present
+```
+
+**Once all the errors have been found students should fix these errors using `nano`.**
+
+Before we go further check our length of total files.  Does it match our original number?
+
+### Merging our files into one data structure
+
+Demonstrate the power/speed of command line versus a GUI like Excel
+
+```bash
+cd [PATH]/gapminder_by_country/
+cat *
+```
+
+#### Activity
+The first thing that we need to find is our header lines. Try a few methods to find this file within this directory.  List some of your favorites in the Etherpad.
+
+```bash
+mv country.cc.txt header.txt 
+
+cat header.txt
+cat header.txt *cc.txt | wc -l
+cat header.txt *cc.txt | less
+cat header.txt *cc.txt > gapminder.txt
+```
+
+Double check our new file
+```bash
+wc -l gapminder.txt
+head gapminder.txt
+tail gapminder.txt
+```
+
+#### Activity
+Which method below would give us the same *data frame* in our gapminder.txt file?  Assume we have already changed country.cc.txt to header.txt.
+	* A) `cat *.cc.txt > header.txt`
+	* B) `cat *.cc.txt >> header.txt`
+	* C) `cat *.cc.txt < header.txt`
+	* D) `cat *.cc.txt > gapminder.txt`
+
+#### Final activity
+
+* Stage, commit, and push your repository to Github.
+* Go to your Github Repo and ensure that all your changes have been pushed correctly
+
+# Lesson 2.1 Working With Data Files in Bash
+
+### Extracting Information With the Command Line
+`grep` is bash's file pattern searcher and is an incredibly useful tool.  Think of it as the 'Find' or `ctrl f` command on your browser.  This is useful when searching files for IDs, dates, times, etc.
+
+```bash
+man grep
+```
+
+Let's try collected all the data points with the year 2007 in them using grep.
+```bash
+grep '2007' gapminder.txt
+```
+
+Let's try adding word boundary.  Word boundaries are a way of telling the computer to search only within the boundary.  So we will flank our item with boundaries so that we will only pull out lines strictly with '2007'
+```bash 
+grep '\b2007\b' gapminder.txt
+
+Output this to a 2007 file
+grep '\b2007\b' gapminder.txt > 2007_subset.txt
+```
+
+Grep has many options and nuances that will take time to learn.  It is more important that you see this as a useful tool for finding lines of interest.  The fancy stuff can come later or as needed.
+
+#### Activity: combine what you know
+Write a command or set of commands in the Etherpad to grep the -v flag in the grep man/help page. 
+
+`sort` is another extremely useful tool when dealing with tab delimited data.
 
 
