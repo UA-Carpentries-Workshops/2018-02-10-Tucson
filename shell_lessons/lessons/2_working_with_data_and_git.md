@@ -183,6 +183,8 @@ cat *
 #### Activity
 The first thing that we need to find is our header lines. Try a few methods to find this file within this directory.  List some of your favorites in the Etherpad.
 
+Now that we have a header file we can begin building our data set.
+
 ```bash
 mv country.cc.txt header.txt 
 
