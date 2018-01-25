@@ -203,10 +203,10 @@ tail gapminder.txt
 
 #### Activity
 Which method below would give us the same *data frame* in our gapminder.txt file?  Assume we have already changed country.cc.txt to header.txt.
-	* A) `cat *.cc.txt > header.txt`
-	* B) `cat *.cc.txt >> header.txt`
-	* C) `cat *.cc.txt < header.txt`
-	* D) `cat *.cc.txt > gapminder.txt`
+* A `cat *.cc.txt > header.txt`
+* B `cat *.cc.txt >> header.txt`
+* C `cat *.cc.txt < header.txt`
+* D `cat *.cc.txt > gapminder.txt`
 
 #### Final activity
 
