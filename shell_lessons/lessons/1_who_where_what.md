@@ -69,17 +69,23 @@ mkdir directory_name
 
 Now we have some basic skills to start working with files.  Build a file structure for today's workshop.  The directories could look something like this (drawn on board/computer):
 
-### *Viewing Files*
+### *Viewing and Working With Files*
 There are a variety of ways to view files.  We will use a few of these methods to understand how they differ from each other. We will download a text file to the data directory to work with.  Download the file [here](https://github.com/UA-Carpentries-Workshops/2018-02-10-Tucson/blob/shell_lessons/shell_lessons/data/the_road_not_taken.txt). 
 
 ```bash
+wc 	[PATH/]FILENAME
 cat [PATH/]FILENAME
 less [PATH/]FILENAME    -Hint: exit with 'q' key
 head [-number] [PATH/]FILENAME
 tail [-number] [PATH/]FILENAME
-```
 
-This may be a good time to introduce wildcards.
+Writing to a file
+file1 > file2	write to a file
+file1 >> file2  append to a file
+
+Pipes
+tail FILENAME | wc -l
+```
 
 ##### Quick check (Etherpad)
 How can we check what is inside the directory?

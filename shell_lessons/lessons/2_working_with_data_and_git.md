@@ -159,7 +159,9 @@ wc -l *
 ```
 
 #### Activity
-Pick a country with your the first letter of your last name.  Put that country into the Etherpad along with your name and inspect the file with the country chosen for any errors.  Report any errors to the Etherpad. If you finish early pick a remaining country and inspect that file as well.
+Pick a country with your the first letter of your last name.  Put that country into the Etherpad along with your name and inspect the file with the country chosen for any errors.  Report any errors to the Etherpad. If you finish early pick a remaining country and inspect that file as well. 
+
+**Countries with multiple words in their name should be spaced using underscores(eg. United States -> United_States)**
 
 The Etherpad should look like
 
@@ -213,7 +215,7 @@ Which method below would give us the same *data frame* in our gapminder.txt file
 * Stage, commit, and push your repository to Github.
 * Go to your Github Repo and ensure that all your changes have been pushed correctly
 
-# Lesson 2.1 Working With Data Files in Bash
+# Lesson 2.2 Working With Data Files in Bash
 
 ### Extracting Information With the Command Line
 `grep` is bash's file pattern searcher and is an incredibly useful tool.  Think of it as the 'Find' or `ctrl f` command on your browser.  This is useful when searching files for IDs, dates, times, etc.
@@ -240,6 +242,23 @@ Grep has many options and nuances that will take time to learn.  It is more impo
 #### Activity: combine what you know
 Write a command or set of commands in the Etherpad to grep the -v flag in the grep man/help page. 
 
-`sort` is another extremely useful tool when dealing with tab delimited data.
+### Sorting files
+
+`sort` is another extremely useful tool when dealing with tab delimited data.  It does exactly what it says and sorts your file in many possible ways. The most common in delimited files is sorting by a column such as year, time, treatment, etc.  
+
+What if we wanted to sort our 2007 file by the life expectancy column?  How might we find this information?
+
+#### Activity
+Find the flag to sort by a specific column in our file.  Post what you think is the correct flag in the Etherpad or vote for one that you agree with.
+
+```bash
+sort -k 4 2007_subset.txt
+```
+
+#### Final activity 2.2
+
+Use sort combined with other bash commands to identify a critical flaw in the file 2007_subset_incorrect.txt file.
+
+Post how/which commands you used to identify the problem and what is the problem in the Etherpad.
 
 
