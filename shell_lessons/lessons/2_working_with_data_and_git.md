@@ -29,15 +29,11 @@ git config --global user.email my_email@gmail.com
 
 Next we need to initialize our repository so git knows to start tracking changes.  A git repository is essentially a data structure were you will begin tracking any changes made to files.  Cd to the top of this workshops file structure and initialize it with git.  
 
-**ls this directory before you `git init` it and take note of what you see.**
 
 ```bash
 git init .
 ```  
 
-##### Activity
-**ls this directory again.  Does anything look different?**
-Post in the etherpad what changed.
 
 
 The first thing we should always do after initializing a repository is add a .gitignore file.  This file is a user created list of files that are to be ignored by git.  For example, if you have large data sets it is recommended that you do not push this to Github.  Therefore, we would ignore those files or the entire directory of data.
@@ -70,7 +66,7 @@ git status #tells us what files have changed
 
 or
 
-git diff #tells us what has changed in the file
+git diff #tells us what has changed
 ```
 
 
@@ -95,6 +91,31 @@ To see the changes made within our commit files we have to use a different comma
 git show
 ```
 
+After commits have been made we look at commit information or we can also visualize a tree of commit information using `git log`
+
+```bash
+git log
+git log --graph --decorate --all
+```
+
+### Setting up a Remote Repo on Github
+
+Go to your Github page and create a new repository SWC_Tucson_2018_02_10_Tucson.  We will need the url to this remote repository to link it with our local git repository.
+
+Use this link with this command to link the repositories
+
+```bash
+git remote add origin [your_link]
+``` 
+
+Before we send anything to the remote repository we want to make sure we are not missing anything that might be on the remote sever.  We will `pull` the remote repository to collect any files it may have.
+
+```bash
+git pull origin master
+```
+
+A note: You could skip the init step if you did not start your project locally and clone from a remote repository instead.
+
 ### Pushing our files to Github
 
 Finally we have staged our changes, and committed them with a nice informational message.  Now we will send them to Github using the push command.  `git push` pushes these files within our repository to a remote server. In our case it will be our Github accounts.
@@ -107,6 +128,9 @@ Now go to your Github account in a browser and see if our repository was pushed 
 
 #### Activity
 What is the difference between staging, committing, and pushing?
+Staging    =
+Committing = 
+Pushing    =
 
 
 ## Working with Data
@@ -224,18 +248,28 @@ Which method below would give us the same *data frame* in our gapminder.txt file
 man grep
 ```
 
-Let's try collected all the data points with the year 2007 in them using grep.
+Let's try collecting all the data points with the year 2007 in them using grep.
 ```bash
 grep '2007' gapminder.txt
 ```
 
-Let's try adding word boundary.  Word boundaries are a way of telling the computer to search only within the boundary.  So we will flank our item with boundaries so that we will only pull out lines strictly with '2007'
+### Activity
+Hmmmm that didn't seem to work like we wanted it to.  How might we might we check if grep could capture a search item as a single word and not part of a word? What command would you use?
+
+<details><summary>Click Me</summary>
+<p>
+
+Answer
+
 ```bash 
-grep '\b2007\b' gapminder.txt
+grep -w '2007' gapminder.txt
 
 Output this to a 2007 file
-grep '\b2007\b' gapminder.txt > 2007_subset.txt
+grep -w '2007' gapminder.txt > 2007_subset.txt
 ```
+
+</p>
+</details>
 
 Grep has many options and nuances that will take time to learn.  It is more important that you see this as a useful tool for finding lines of interest.  The fancy stuff can come later or as needed.
 
