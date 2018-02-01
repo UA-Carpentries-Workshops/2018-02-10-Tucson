@@ -256,10 +256,9 @@ grep '2007' gapminder.txt
 ### Activity
 Hmmmm that didn't seem to work like we wanted it to.  How might we might we check if grep could capture a search item as a single word and not part of a word? What command would you use?
 
-<details><summary>Click Me</summary>
+<details><summary>Answer</summary>
 <p>
 
-Answer
 
 ```bash 
 grep -w '2007' gapminder.txt
