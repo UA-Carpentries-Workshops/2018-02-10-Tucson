@@ -76,7 +76,7 @@ mkdir directory_name
 Now we have some basic skills to start working with files.  Build a file structure for today's workshop.  The directories could look something like this (drawn on board/computer):
 
 *Etherpad question*<br>
-Write on the etherpad. Which one of the following commands would help you list the contents of a folder?
+Write on the etherpad. Which one of the following commands would help you list the contents of a folder?<br>
 a. pwd<br>
 b. ls<br>
 c. mkdir<br>
@@ -103,7 +103,7 @@ file1 >> file2  append to a file
 tail FILENAME | wc -l
 ```
 *Etherpad question*<br>
-Write on the etherpad. Which one of the following commands would help you capture the last lines on a file?
+Write on the etherpad. Which one of the following commands would help you capture the last lines on a file?<br>
 a. ls<br>
 b. cat<br>
 c. wc<br>
