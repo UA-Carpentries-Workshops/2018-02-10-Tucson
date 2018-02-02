@@ -28,7 +28,7 @@ Now, what would we do in order to list the first three lines of any two country 
 * cp
 * none of the above
 
-Solution: none of the above!
+Solution: none of the above.
 
 ### What are loops
 Loops are key to productivity improvements through automation as they allow us to execute commands repetitively. 
