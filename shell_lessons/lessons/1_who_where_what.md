@@ -2,7 +2,7 @@
 
 ## Graphical User Interface and the Command Line
 
-Graphical User Interfaces (GUIs) are what we might be most familiar with and typically have mouse and keyboard support along with a more user friendly interface.  Operating systems like Windows and MacOS utilize GUIs for navigation purposes (Finder/My Computer) as well as applications like iTunes, Photoshop, Word, and Excel.  These are useful tools but can have drawbacks such as speed, hardware requirements, and/or compatibility issues. For these reasons the command line is still a useful tool among a variety of fields like biology, software development, mathematics, etc. We will start today by navigating the file system of our computers.  Let's start by opening up our home directory with the more user friendly GUI provided with our operating systems.
+Graphical User Interfaces (GUIs) are what we might be most familiar with and typically have mouse and keyboard support along with a more user friendly interface. Operating systems like Windows and MacOS utilize GUIs for navigation purposes (Finder/My Computer) as well as applications like iTunes, Photoshop, Word, and Excel. These are useful tools but can have drawbacks such as speed, hardware requirements, and/or compatibility issues. For these reasons the command line is still a useful tool among a variety of fields like biology, software development, mathematics, etc. We will start today by navigating the file system of our computers. Let's start by opening up our home directory with the more user friendly GUI provided with our operating systems.
 
  * Open Finder or My computer
  * What do we see?
@@ -14,7 +14,7 @@ This is what is called our Home Directory. Now let's make the leap into the comm
 
 ### *Command Line Navigation*
 
-Because the command line looks cryptic there are two things you can always do to orient yourself. `pwd` Stands for print working directory and shows the root to the current directory you are in from left to right.  Directories are indicated in the command line by a `/`.  The second command is `whoami` and will output the current user. 
+Because the command line looks cryptic there are two things you can always do to orient yourself. `pwd` Stands for Print Working Directory and shows the root to the current directory you are in from left to right. Directories are indicated in the command line by a `/`.  The second command is `whoami` and will output the current user. 
 
 ```bash
 pwd
@@ -25,17 +25,23 @@ whoami
 
 **The file structure shown using `pwd` can be thought of as a tree of files with branches and nodes.**
 
-What if we were not sure what `pwd` actually does?  For that we can use `--help` or `man`.  This will vary by operating system and `man` stand for manual.  Try using each of these commands with `pwd` on your system.  Note: the order of each of these commands.
+What if we were not sure what `pwd` actually does?  For that we can use `--help` or `man`.  This will vary by operating system and `man` stand for manual. Try using each of these commands with `pwd` on your system.  Note: the order of each of these commands.
 
 ```bash
 pwd --help
 man pwd
 ``` 
 
-Let's use some of these flags/options to see what they do.
+*Exercise:* 
+Use `man whoami` or `whoami --help` on your computer. What is the output? 
+
+*Etherpad question:*
+Write down two other actions that you might execute on the GUI. For instance: moving a file.
+
+Let's try some of these actions on the command line to see what they do.
 
 #### cd: Moving across directories
-Now that we know where we are lets ensure our GUI and command line are in the same directory.  To move directories we 'change directory' using `cd`. This is followed by some sort of direction for the computer.  For example: 
+Now that we know where we are lets ensure our GUI and command line are in the same directory. To move directories we 'change directory' using `cd`. This is followed by some sort of direction for the computer. For example: 
 
 ```bash
 cd ../
@@ -45,7 +51,6 @@ cd /Users/usrname/Documents
 cd
 ```
 
-
 #### ls: Listing directory contents
 To show what is in the current directory we use list `ls`. We can also give `ls` more direction to list the contents of other directories. 
 
@@ -53,7 +58,7 @@ To show what is in the current directory we use list `ls`. We can also give `ls`
 ls
 ls Documents/
 ```
-Or change how we output the file contents using what are called flags.  Flags are options that command after a command and tell that application to do something specific that is not default.  How might we find out what these flags are and what they do?  Try some flags out that you find interesting. 
+Or change how we output the file contents using what are called flags. Flags are options that command after a command and tell that application to do something specific that is not default. How might we find out what these flags are and what they do?  Try some flags out that you find interesting. 
 
 ```bash
 ls -lh
@@ -66,26 +71,42 @@ We create directories by using the make directory command `mkdir`.
 ```bash
 mkdir directory_name
 ```
-
 Now we have some basic skills to start working with files.  Build a file structure for today's workshop.  The directories could look something like this (drawn on board/computer):
 
-### *Viewing and Working With Files*
-There are a variety of ways to view files.  We will use a few of these methods to understand how they differ from each other. We will download a text file to the data directory to work with.  Download the file [here](https://github.com/UA-Carpentries-Workshops/2018-02-10-Tucson/blob/shell_lessons/shell_lessons/data/the_road_not_taken.txt). 
+*Etherpad question*
+Write on the etherpad. Which one of the following commands would help you list the contents of a folder?
+a. pwd
+b. ls
+c. mkdir
+d. cd
 
+### *Viewing and Working With Files*
+There are a variety of ways to view files. We will use a few of these methods to understand how they differ from each other. We will download a text file to the data directory. Download the file [here](https://github.com/UA-Carpentries-Workshops/2018-02-10-Tucson/blob/shell_lessons/shell_lessons/data/the_road_not_taken.txt). 
+
+*Viewing the content inside a file
 ```bash
 wc 	[PATH/]FILENAME
 cat [PATH/]FILENAME
 less [PATH/]FILENAME    -Hint: exit with 'q' key
 head [-number] [PATH/]FILENAME
 tail [-number] [PATH/]FILENAME
-
-Writing to a file
+```
+*Writing to a file
+```bash
 file1 > file2	write to a file
 file1 >> file2  append to a file
-
-Pipes
+```
+*Pipes
+```bash
 tail FILENAME | wc -l
 ```
+*Etherpad question*
+Write on the etherpad. Which one of the following commands would help you capture the last lines on a file?
+a. ls
+b. cat
+c. wc
+d. tail
+
 
 ##### Quick check (Etherpad)
 How can we check what is inside the directory?
