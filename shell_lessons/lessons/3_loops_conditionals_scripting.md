@@ -406,7 +406,7 @@ debug more prints out each command as it is run, which will help to locate error
 bash -x first_argument_sh Italy.cc.txt 4 1
 ```
 
-### Final shell exercise!
+### Final shell exercise
 
 Now, we will create a final shell script that works on the gapminder data set. 
 
