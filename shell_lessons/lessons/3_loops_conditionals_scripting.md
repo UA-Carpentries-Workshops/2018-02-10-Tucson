@@ -25,12 +25,12 @@ In a way, we have become familiar with the idea of using the command line to mov
 Write the command that you would use to find the first two lines in all files with a .txt extension for the gapminder_by_country folder?<br>
 Navigate to that folder using `cd` if you find yourself out of it.
 
-*Solution:* 
+***Solution:*** 
 ```bash
 head -n 2 *.txt
 ```
 
-#### Structure of a for loop
+### Structure of a for loop
 
 While we can type and execute a loop using the command line, it is more effective (and visualy pleasing) to use a text editor.
 
