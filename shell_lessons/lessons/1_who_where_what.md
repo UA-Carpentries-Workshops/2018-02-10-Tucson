@@ -12,6 +12,8 @@ This is what is called our Home Directory. Now let's make the leap into the comm
  * Split your screen in half: one side is the GUI, the other the command line
  * Do the command line and GUI seem similar in any way?
 
+Notice that there could be some small differences between our own screen (the display) and what you seen in your computers. We have set our terminal/gitbash to have a white background and black font. This might not be the default on your case. You will still be able to follow along on this workshop, but let us know if you would like to change your own display. Likewise, the appearance of the command line window is a bit different between windows and mac. Fortunatelly we have both operative systems on display here, so you can follow along with the corresponding one.
+
 ### *Command Line Navigation*
 
 Because the command line looks cryptic there are two things you can always do to orient yourself. `pwd` Stands for Print Working Directory and shows the root to the current directory you are in from left to right. Directories are indicated in the command line by a `/`.  The second command is `whoami` and will output the current user. 
@@ -93,7 +95,7 @@ tail [-number] [PATH/]FILENAME
 ```
 *Writing to a file
 ```bash
-file1 > file2	write to a file
+file1 > file2	  write to a file
 file1 >> file2  append to a file
 ```
 *Pipes
@@ -107,22 +109,22 @@ b. cat
 c. wc
 d. tail
 
+*Etherpad question*
+On the etherpad, write a single line of code to count the number of words on the first three lines of a conuntry file. You can try this code on your own computer and see what happends.
 
-##### Quick check (Etherpad)
-How can we check what is inside the directory?
-
-Now we will create a file.  You can do this two ways.  The first is to `touch` creating an empty file, or we can open a text editor while simultaneously creating a file.
+### *Creating a new file*
+Now we will create a file. You can create and empty file by using the command `touch` and use a text editor to change it. 
 
 ```bash
 touch file_name_touch
 nano file_name_editor
 ```
-
-Nano is what is known as a text editor.  Text editors can be thought of as a very simple word processor without any bells or whistles.  It exists to write text into a file from the command line: that's it.  However, its simplicity makes it a powerful tool for compatibility and as a place to write programmable scripts.  
+Nano is what is known as a text editor. Text editors can be thought of as a very simple word processor without any bells or whistles.  It exists to write text into a file from the command line: that's it.  However, its simplicity makes it a powerful tool for compatibility and as a place to write programmable scripts.
 
 ##### Activity
-Create a file in your current directory and write some text in that file.  Exam your file using the commands we have learned.
+Create a file in your current directory and write a one verse poem in that file. Then, use the commands that we have learned to examine your file.
 
+### *Moving, copying, and removing files*
 We can also copy, move and remove files and directories.
 
 ```bash
