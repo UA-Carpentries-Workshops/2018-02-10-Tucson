@@ -10,40 +10,29 @@ wc [filename]
 ```
 What would you do if you wanted to check this number of words in 5 files? What about 500 files? Would you type the same command 500 times just changing the name of the file?
 
-In cases like this, we want to use a loop. A loop is a way of using programming to avoid having to type the same commands over and over again. Loops save tim and make you more efficient! In other words, they are a way of automating a task, whatever it might be. For instance we might like to automate a task for:<br>
+In cases like this, we want to use a loop. A loop is a way of using programming to avoid having to type the same commands over and over again. Loops save time and make you more efficient! In other words, they are a way of automating a task, whatever it might be. For instance we might like to automate a task for:<br>
 
 a) Modifying the names of a series of files<br>
 b) Capturing a certain value across all genes in a genome<br>
 c) Converting a given temperature across scales for multiple locations.<br>
 
-*Etherpad question*<br> 
+***Etherpad question***<br> 
 What other examples come to mind?
 
 In a way, we have become familiar with the idea of using the command line to move, copy, observe, etc. several files at the same time. For instance:
 
-*Etherpad question*<br>
+***Etherpad question***<br>
 Write the command that you would use to find the first two lines in all files with a .txt extension for the gapminder_by_country folder?<br>
 Navigate to that folder using `cd` if you find yourself out of it.
 
-Solution: 
+*Solution:* 
 ```bash
 head -n 2 *.txt
 ```
 
-### What are loops
-Loops are key to productivity improvements through automation as they allow us to execute commands repetitively. 
-Loops are similar to wildcards and tab completion, using loops reduces the amount of typing (and typing mistakes). 
-
-Now lets try the above example using a loop:
-
-```bash
-for filename in Jordan.cc.txt Kenya.cc.txt
-do
-	head -n 3 $filename
-done
-```
-
 #### Structure of a for loop
+
+While we can type and execute a loop using the command line, it is more effective (and visualy pleasing) to use a text editor.
 
 Using the command `for` we can repeat a command (or a group of them) once for each element in a list. 
 Each time the loop runs (called an iteration), an item in the list is assigned in sequence to a variable, 
