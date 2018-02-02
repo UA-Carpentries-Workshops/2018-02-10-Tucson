@@ -3,7 +3,7 @@
 ## Looping through multiple files
 ### Why use loops
 
-Let's start with an question. What would you do if you wanted to change the number of words in a file using the command line?
+Let's start with an question. What would you do if you wanted to check the number of words in a file using the command line?
 
 ```bash
 wc [filename]
