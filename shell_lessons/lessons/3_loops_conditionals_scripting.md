@@ -12,7 +12,7 @@ b) Capture a certain value across all genes in a genome
 c) Convert a given temperature across scales for multiple locations.
 
 *Etherpad question*\n 
-What other examples come to mind?
+\nWhat other examples come to mind?
 
 We have used some commands that allowed us to access/modify multiple files at the same time. For instance,
 what would we do if we like to list all files with a .txt extension for the gapminder_by_country folder?
