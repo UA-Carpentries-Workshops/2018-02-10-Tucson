@@ -30,65 +30,53 @@ Navigate to that folder using `cd` if you find yourself out of it.
 head -n 2 *.txt
 ```
 
-### Structure of a for loop
+### Structure of a loop
 
-While we can type and execute a loop using the command line, it is more effective (and visualy pleasing) to use a text editor.
+While we can type and execute a loop using the command line, it is more effective (and visualy pleasing) to use a text editor. Let's begin by examining the structure of a loop, as well as reviewing some concepts from the past lessons.
 
-Using the command `for` we can repeat a command (or a group of them) once for each element in a list. 
-Each time the loop runs (called an iteration), an item in the list is assigned in sequence to a variable, 
-and the commands inside the loop are executed, before moving on to the next item in the list. Inside the loop, 
-we call for the variable’s value by putting $ in front of it. The $ tells the shell interpreter to treat a 
-given name as a variable and substitute its value on eahc loop's iteration.
-
-Let's breakdown the structure of a for loop:
-
-* `for` (command that starts the loop)
-* filename in Jordan.cc.txt Kenya.cc.txt (two items in the filename variable. "filename" can be replaced by any other term) 
-* do (indicates the list of commands INSIDE THE LOOP that will run on each iteration) 
-* any command desired. In this case we used `head`
-* $ (we put $ in front of the variable value to call it)
-* done (ends the commands INSIDE THE LOOP)
-
-Now, let's create a loop that prints the last five lines on each file, for any three countries of your choice:
-
-Solution:
-```bash
-for filename in Jordan.cc.txt Kenya.cc.txt Venezuela.cc.txt Uruguay.cc.txt
-do
-	tail -n 5 $filename
-done
-```
-
-Let's create another loop that prints the number of words in ALL files within the gapminder_by_country dataset:
-
-Solution:
-```bash
-for filename in *.txt
-do
-	wc $filename
-done
-```
-
-* What would be the output of the following loops?
+***Activity***<br>
+Find the `loop_intro.sh` file in your own computer and run the file using the following:
 
 ```bash
-for variable in *.txt
-do
-	echo $variable
-done
+sh loop_intro.sh
 ```
+Answer the following questions on the etherpad:<br>
+a. What happened?<br>
+b. Mention two things that you notice on the loop.<br>
+c. What does the `echo` command do?
+
+The `for` commands tells the computer that we are inside a loop. There are different types of loops, those that begin by using the `for` command are known as *for loops*. From now on, I will be using this term. The *for loop* tells the computer that we want to execute a command multiple times.
+
+Let's break down what is happening.
+
+1. In this case, the *for loop* will run 20 time. In other words, the loop will be executed the number of times we instruct it to. There are other types of loops that run until a certain condition is met. We will go over them in a bit more detail later. <br>
+2. *number* is the main variable in our loop. Each time the loop runs (called an iteration) the *number* variable is reassigned to a new digit. <br>
+3. During each iteration, we reassign the variable and perform a task/command inside the loop in association with this variable. The *inside of the loop* is signaled by the command `do`.<br>
+4. The *$* symbol indicates the name of the variable inside the loop. It should be the same name as the one used outside the loop. In other words, we call for the variable’s value by putting *$* in front of it. <br>
+5. Finally, the command `do` signals the end of the loop.
+
+Now, let's take a moment to examine other loops. 
+
+***Activity***<br>
+Find the `loop_structure.sh` file and execute it by running:<br>
 
 ```bash
-for x in *.txt
-do
-	echo $x
-done
+sh ~/Desktop/loop_structure.sh
 ```
+Note that you might need to modify the path to the file based on the file strcuture you have created.
 
-The output is the same! So: 
-* What is different between these loops?
-* What does the command "echo" do?
-* Why using these types of variable names (x and variable) might be problematic? 
+a. What does this loop do?<br>
+b. Why do we need to change the path to the `loop_structure.sh` file?<br>
+
+***Activity***<br>
+Take a moment to modify this or the previous file. Test and evaluate different possibilities by changing different elements of the loop. Report any questions or interesting finding onto the etherpad.
+
+***Etherpad question***<br>
+Run the `loop_question1.sh` and `loop_question2.sh` files on the command line and answer the following questions. <br>
+a. What is the output? <br>
+b. What is different between these loops? <br>
+ 
+Using not informative variable names might be problematic, because you or other people looking at your code, might not know what the variable is referring to. **Avoid this issue by using variable names that are indicative and pertinent to the situation**  
 
 
 ### While loops
