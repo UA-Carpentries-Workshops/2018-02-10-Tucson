@@ -6,9 +6,15 @@ Another benefit to using the command line is the ability to manipulate data file
 
 Usage of the command line also allows us to use a version control application called git.  Version control is a useful tool as it tracks any changes to your files over time.  Imagine one may have several drafts saved of a single manuscript.  With version control we could track the edits made between drafts overtime in a single file.   
 
+![Version Control PhD Comics](http://swcarpentry.github.io/git-novice/fig/phd101212s.png)
+
+
 First we need to acquire the data we will be using today and tomorrow using git.  For this we will clone a repository with `git clone`.  When using any git commands we first call `git` followed by the specific command, `clone` in this case.
 
 Clone the repository for this workshop to collect the data.  Feel free to download this wherever you like.  We will be copying all the data files into our `data/` directory and deleting this cloned repository.
+
+
+
 ```bash
 git clone https://github.com/UA-Carpentries-Workshops/2018-02-10-Tucson.git
 ```   
@@ -253,7 +259,7 @@ Let's try collecting all the data points with the year 2007 in them using grep.
 grep '2007' gapminder.txt
 ```
 
-### Activity
+#### Activity
 Hmmmm that didn't seem to work like we wanted it to.  How might we might we check if grep could capture a search item as a single word and not part of a word? What command would you use?
 
 <details><summary>Answer</summary>
