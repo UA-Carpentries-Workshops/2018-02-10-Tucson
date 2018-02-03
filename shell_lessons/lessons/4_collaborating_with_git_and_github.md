@@ -1,14 +1,14 @@
 # Lesson 4
 
-## Before we beging
+## Before we begin
 
-We have spend the first part of our afternoon becoming familiarized with shell scripting. Before 
+We have spent the first part of our afternoon becoming familiarized with shell scripting. Before 
 we start, we will import/push our script onto our github repository by following the steps
 of lesson 2.
 
 ## Collaborating with github
 
-Now of days, working on a project requires the collaborative efforts of researchers and/or developers.
+Now days, working on a project requires the collaborative efforts of researchers and/or developers.
 The more people are involved in a project, the more beneficial is for the project itself. However, it also
 increases the challenges of sharing and tracking both old and new information, particularly when 
 sharing pieces of code.
@@ -131,7 +131,7 @@ when the collaborator who made the first change pulls again.
 ## Avoiding conflicts
 
 While Github has tools to minimize and resolve conflicts, it is best to avoid them
-in the first place. A typical work pipeline while collaborating in githuh is as follows:
+in the first place. A typical work pipeline while collaborating in github is as follows:
 
 a) Update your local repo with git pull origin master.
 b) Make your changes and stage them with git add.
@@ -173,3 +173,57 @@ sort sorted_consonants.txt >> sorted_sorterd_consonants.txt
 
 mv -i sorted_sorterd_consonants.txt ~/Desktop/
 ```
+
+# If we still have time: Branching and Forking
+
+## Branching
+
+Branching is an extremely useful tool when working on a project with many people.  Say you or a group were assigned a specific development task on a much larger project.  You know you will not be adding much or anything to the master branch, so it's best if you work in your own space in order to not accidentally tamper with anything on the master branch.  This is called branching.
+
+Continuing in your pair, one of you will create a new branch while the other continues to make changes on the master branch. I will be branching on one of your repositories.
+
+```bash
+git branch [branch_name]
+```
+
+Check to see what branches are available and where you are located
+
+```bash
+git branch
+```
+
+To move from branch to branch we use `git checkout`
+
+```bash
+git checkout my_branch
+```
+
+Now you can start working on your project in the safety of your own branch.  From this point you can add, commit, and push as you would on your own personal repository.  
+
+#### Activity 
+Go ahead and create directories, scripts, text files, etc. so that your branch is different form master.  When you are ready add, commit, and push these changes to Github.  Can you find your branch on Github?
+
+### Merging
+When the time comes that you have completed your project and wish to share it with the rest of your team you must merge your branch with the desired branch (usually the master branch, but it could be any branch within a large project).
+
+I recommend that you always pull before you begin the merging process to ensure things are up to date.
+
+```bash
+git pull
+```
+
+A word of advice: It is better to hop on the branch you want to merge with and then merge.  For example, if you made changes to my_branch, and want to merge with master, checkout to master first.  If conflicts arise they should all be changes from your branch.  This means you should recognize these changes and can make better decisions about addressing them.  This is in contrast to merging the master while on my_branch where you may find many conflicts that you had no part of and may not know what to do about them.
+
+
+
+```bash
+git checkout master [or_branch_to_merge_with]
+
+git merge my_branch
+```
+
+You successfully branched from master made changes and merged those changes back to master!  Great job!
+
+## Forking (Github only)
+
+
