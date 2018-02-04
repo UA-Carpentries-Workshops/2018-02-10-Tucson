@@ -75,6 +75,7 @@ git pull origin master
 make sure to share the changes onto github.
 
 
+# If we still have time
 ## Conflicts
 
 If you have ever been working on the same project but using different machines you might have ended up with 
@@ -173,8 +174,6 @@ sort sorted_consonants.txt >> sorted_sorterd_consonants.txt
 
 mv -i sorted_sorterd_consonants.txt ~/Desktop/
 ```
-
-# If we still have time: Branching and Forking
 
 ## Branching
 
