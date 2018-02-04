@@ -32,8 +32,7 @@ We will switch roles during this lesson, so both persons will play Owner and Col
 Also we will use both the command line/terminal and the GUI interface to observe how the changes
 in github are tracked.
 
-
-### Allowing/Accepting collaborations in your repo
+Allowing/Accepting collaborations in your repo
 
 1) You can provide access to your collaborator by clicking on the settings button on the right
 of the Gihub GUI interface, then select Collaborators, and enter your partner’s username.
@@ -80,6 +79,37 @@ git pull origin master
 **Switch roles with your partner and add another comment to the code. Once you are done,
 make sure to share the changes onto github.**
 
+## Final github/shell exercise!
+
+Now, its time for our final mission of the day! We will work in pairs for this final exercise.
+Your objective is to:
+
+1) Create a shell script that provides some information from the gapminder dataset.
+2) Add, push, and commit this script to your respective repos.
+3) Clone the script onto your local system to perform and track changes done by your collaborator.
+
+Your modifications to the lesson 3 script should be able to:
+a) Change the script so it finds countries names that start with 5 consonants of your choosing. 
+b) Sort the contents within each file (they should be sorted by year).
+c) Capture the entire content of the sorted files onto a single output file.
+d) Sort the contents of the file again (by year).
+e) Move the script to your Desktop.
+e) Comment the script to explain its purpose and what each line of code does.
+
+Make sure to back and ford when collaborating in this script with your partner!
+
+Possible solution:
+```bash
+for filename in V*.txt R*.txt L*.txt J*txt N*.txt
+do
+    echo "$filename"
+    sort "$filename" >> sorted_consonants.txt
+done
+
+sort sorted_consonants.txt >> sorted_sorterd_consonants.txt
+
+mv -i sorted_sorterd_consonants.txt ~/Desktop/
+```
 
 # If we still have time
 ## Conflicts
@@ -134,7 +164,6 @@ git push origin master
 Git keeps track of what we’ve merged with what, so we don’t have to fix things by hand again 
 when the collaborator who made the first change pulls again.
 
-
 ## Avoiding conflicts
 
 While Github has tools to minimize and resolve conflicts, it is best to avoid them
@@ -147,39 +176,6 @@ d) Upload the changes to GitHub with git push origin master.
 
 Note that it is better to make many commits with smaller changes rather than of one commit with 
 massive changes: small commits are easier to read and review.
-
-## Final github/shell exercise!
-###Creating a shell script and sharing it on github
-
-Now, its time for our final mission of the day! We will work in pairs for this final exercise.
-Your objective is to:
-
-1) Create a shell script that provides some information from the gapminder dataset.
-2) Add, push, and commit this script to your respective repos.
-3) Clone the script onto your local system to perform and track changes done by your collaborator.
-
-Your modifications to the lesson 3 script should be able to:
-a) Change the script so it finds countries names that start with 5 consonants of your choosing. 
-b) Sort the contents within each file (they should be sorted by year).
-c) Capture the entire content of the sorted files onto a single output file.
-d) Sort the contents of the file again (by year).
-e) Move the script to your Desktop.
-e) Comment the script to explain its purpose and what each line of code does.
-
-Make sure to back and ford when collaborating in this script with your partner!
-
-Possible solution:
-```bash
-for filename in V*.txt R*.txt L*.txt J*txt N*.txt
-do
-    echo "$filename"
-    sort "$filename" >> sorted_consonants.txt
-done
-
-sort sorted_consonants.txt >> sorted_sorterd_consonants.txt
-
-mv -i sorted_sorterd_consonants.txt ~/Desktop/
-```
 
 ## Branching
 
@@ -205,7 +201,7 @@ git checkout my_branch
 
 Now you can start working on your project in the safety of your own branch.  From this point you can add, commit, and push as you would on your own personal repository.  
 
-#### Activity 
+***Activity***<br> 
 Go ahead and create directories, scripts, text files, etc. so that your branch is different form master.  When you are ready add, commit, and push these changes to Github.  Can you find your branch on Github?
 
 ### Merging
@@ -218,8 +214,6 @@ git pull
 ```
 
 A word of advice: It is better to hop on the branch you want to merge with and then merge.  For example, if you made changes to my_branch, and want to merge with master, checkout to master first.  If conflicts arise they should all be changes from your branch.  This means you should recognize these changes and can make better decisions about addressing them.  This is in contrast to merging the master while on my_branch where you may find many conflicts that you had no part of and may not know what to do about them.
-
-
 
 ```bash
 git checkout master [or_branch_to_merge_with]
