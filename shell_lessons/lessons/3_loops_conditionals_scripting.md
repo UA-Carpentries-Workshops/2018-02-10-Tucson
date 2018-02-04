@@ -169,22 +169,12 @@ c. Change *integer* from 3 to 32 and notice what happends.<br>
 
 ## Conditionals and loops
 
-While loops and conditional statements are interesting and useful on their own, they work really great together.
-Loops and conditional can be used to exammine large amounts of data and perform unique processes on them depending 
-on if they met a certain criteria. In order to use both of these commands at the same time, you need to keep
-track of the structure of your code. Using the gapminder_by_country dataset:
+*Loops* and *conditionals* are useful on their own and work really well together. By combining *loops* and *conditionals*
+we can examine and separate large amounts of data.<br>
 
-```bash
-for filename in U*.txt
-do
-    if [[ -s "$filename" ]]
-    then
-        echo "$filename is not empty"
-    else
-        echo "$filename is empty"
-    fi
-done
-```
+***Activity***<br>
+Run the `loops_and_conditionals.sh` file on the command line and observed the output. On particular notice the syntax and organization of this sample code. Take a few minutes to run some modifications on the code. For example, you can change the range of numbers at the start of the loop or the comparison operator<br>
+
 
 ## Piping and saving to a file while inside a loop
 
