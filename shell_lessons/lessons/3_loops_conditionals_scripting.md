@@ -303,7 +303,7 @@ b. Changing the $2 argument number. <br>
 c. Changing the $3 argument number. <br>
 
 ***Etherpath question***<br>
-What does the $2 and $3 variables mean in the context of this script? t
+What does the $2 and $3 variables mean in the context of this script?
 
 
 ## Debugging the script
