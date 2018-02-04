@@ -6,6 +6,8 @@ We have spent the first part of our afternoon becoming familiarized with shell s
 we start, we will import/push our script onto our github repository by following the steps
 of lesson 2.
 
+**Take a few minutes to add your lesson 3 final script to your own repo.**
+
 ## Collaborating with github
 
 Now days, working on a project requires the collaborative efforts of researchers and/or developers.
@@ -21,6 +23,7 @@ At this point we all have created our own github repository (repo). You are "Own
 In order to have someone else to contribute and make changes to your repository ("Collaborator")
 you will need to give them access.
 
+***Activity***<br>
 For the next step, get into pairs. One person will be the “Owner” and the other will be
 the “Collaborator”. The goal is that the Collaborator add changes into the Owner’s repository. 
 
@@ -38,18 +41,20 @@ of the Gihub GUI interface, then select Collaborators, and enter your partner’
 2) To accept access to the Owner’s repo, the Collaborator needs to go to 
 https://github.com/notifications and accept access to the Owner’s repo. 
 
-* Take a couple of minutes to provide access to each other repos.
+**Take a couple of minutes to provide access to each other repos.**
 
 3) Next, the Collaborator needs to download a copy of the Owner’s repository to their machine. 
 We will do this by “cloning a repo”, just as we did in lesson 2 to obtain the gapminder dataset.
 
-* Take a moment to clone the Owner's repo onto your computer.
+**Take a moment to clone the Owner's repo onto your computer.**
 
 4) Now, you should have access to your partners code! You can view it and modify it as how we
 have done so in the previous lesson. We will start by doing a small change. 
 
-* Take a moment to add a comment onto your partners code by using nano. Remember to save the
-changes in your computer. Once you have finished your will:
+**Take a moment to add a comment onto your partners code by using nano. Remember to save the
+changes in your computer.** 
+
+Once you have finished your will:
 
 ```bash
 git add shared_shell_script.sh
@@ -60,19 +65,20 @@ git push origin master
 Note that we didn’t have to create a remote called origin: Git uses this name by default when 
 we clone a repository. 
 
-Now, take a look to the Owner’s repository on its GitHub website (maybe you need to refresh 
-your browser) You should be able to see the new commit made by the Collaborator.
+**Take a look to the Owner’s repository on its GitHub website (maybe you need to refresh 
+your browser). You should be able to see the new commit made by the Collaborator.**
 
 5) To download the Collaborator’s changes from GitHub, the Owner should now enter:
 
 ```bash
 git pull origin master
 ```
+**Take another look to the Owner’s repository on its GitHub website.** 
 
 6) Now the three repositories (Owner’s local, Collaborator’s local, and Owner’s on GitHub) are in sync.
 
-* Switch roles with your partner and add another comment to the code. Once you are done,
-make sure to share the changes onto github.
+**Switch roles with your partner and add another comment to the code. Once you are done,
+make sure to share the changes onto github.**
 
 
 # If we still have time
