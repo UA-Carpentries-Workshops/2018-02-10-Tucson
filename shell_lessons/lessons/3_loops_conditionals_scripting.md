@@ -265,10 +265,10 @@ Using nano, add comments to the `pipes_gapminder2.sh` and `pipes_gapminder3.sh` 
 
 ## Using the script with arbitrary files:
 
-Alternatively, we can make our script more versatile by chanding our use of variables. For example,
+We can also make our script more versatile by chanding our use of variables. For example,
 we can let the user specify which data file they want to use by changing the variable name to "$1".
 Inside a shell script, $1 means "the first filename (or other argument) on the command line". 
-We can now run our script like this:
+For example, the following script:
 
 ```bash
 #Runs script with first argument given in the command line
@@ -276,32 +276,35 @@ echo "$1"
 head -n 5 "$1" | tail -n 2
 ```
 
-This new shell script can be executed as:
+...requires additional input in the command line. This new shell script can be executed as:
 
 ```bash
-bash first_argument_sh Italy.cc.txt
+sh ~/Desktop/arguments.sh Italy.cc.txt
 ```
 
-Now try to execute the shell script with a different argument (country name). Does the script still works
-when you try using data from other countries?
-
 Moreover, we can assign variable names to other arguments inside the script in order to
-further increase its versatility. For example, we can change hard coded variables in the
-head and tail commands as follows:
+further increase its versatility. For example, we can change hard coded variables as follows:
 
 ```bash
 #Runs script with first argument given in the command line
 echo "$1"
 head -n "$2" "$1" | tail -n "$3"
 ```
-$2 means the second argument on the command line and $3 means the third. Now, we can execute
-the script as follows:
+... and execute the file as:
 
 ```bash
-bash first_argument_sh Italy.cc.txt 4 1
+sh ~/Desktop/arguments.sh Italy.cc.txt 4 1
 ```
-Try running the script while modifying the arguments in the terminal. Does the behaviour
-of the script's output changes?
+
+***Activity***<br>
+Modify the input argument for the `arguments.sh` file in the command line. Try the following:<br>
+a. Changing the country name. <br>
+b. Changing the $2 argument number. <br>
+c. Changing the $3 argument number. <br>
+
+***Etherpath question***<br>
+What does the $2 and $3 variables mean in the context of this script? t
+
 
 ## Debugging the script
 
