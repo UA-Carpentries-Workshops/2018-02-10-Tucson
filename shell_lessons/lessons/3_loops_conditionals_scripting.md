@@ -314,7 +314,7 @@ any bugs in our script we need to use the -x flag to run bash in debug mode. Run
 debug more prints out each command as it is run, which will help to locate errors.
 
  ```bash
-bash -x first_argument_sh Italy.cc.txt 4 1
+sh -x first_argument_sh Italy.cc.txt 4 1
 ```
 
 # Final shell exercise
