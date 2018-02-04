@@ -223,7 +223,7 @@ sh ~/Desktop/pipes_gapminder2.sh
 
 Note that you might need to modify the path to the file based on the file strcuture you have created.
 
-Answer the following questions on the **Etherpad**:
+Answer the following questions on the **Etherpad**:<br>
 a. What does the pipes_gapminder1.sh files do?<br>
 b. What does the pipes_gapminder2.sh files do?<br>
 c. What do you expect to find on the output_test.txt file?<br>
@@ -321,11 +321,11 @@ bash -x first_argument_sh Italy.cc.txt 4 1
 
 Now, we will create a final shell script that works on the gapminder data set. 
 
-Your script should be able to:
-a) Loop through the files in the gapminder data set.
-b) Find all files that belong to countries names that start with a vowel.
-c) Print the name of those files to the command line/terminal.
-d) Capture the first two lines of those files to a single output.
+Your script should be able to:<br>
+a) Loop through the files in the gapminder data set.<br>
+b) Find all files that belong to countries names that start with a vowel.<br>
+c) Print the name of those files to the command line/terminal.<br>
+d) Capture the first two lines of those files to a single output.<br>
 e) Move the output file to the Desktop
 
 Possible solution:
