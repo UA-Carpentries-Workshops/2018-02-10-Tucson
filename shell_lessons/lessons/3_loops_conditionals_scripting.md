@@ -40,6 +40,12 @@ Find the `loop_intro.sh` file in your own computer and run the file using the fo
 ```bash
 sh loop_intro.sh
 ```
+Or by using:
+
+```bash
+bash loop_intro.sh
+```
+
 Answer the following questions on the etherpad:<br>
 a. What happened?<br>
 b. Mention two things that you notice on the loop.<br>
@@ -53,7 +59,7 @@ Let's break down what is happening.
 2. *number* is the main variable in our loop. Each time the loop runs (called an iteration) the *number* variable is reassigned to a new digit. <br>
 3. During each iteration, we reassign the variable and perform a task/command inside the loop in association with this variable. The *inside of the loop* is signaled by the command `do`.<br>
 4. The *$* symbol indicates the name of the variable inside the loop. It should be the same name as the one used outside the loop. In other words, we call for the variable’s value by putting *$* in front of it. <br>
-5. Finally, the command `do` signals the end of the loop.
+5. Finally, the command `done` signals the end of the loop.
 
 Now, let's take a moment to examine other loops. 
 
@@ -81,58 +87,48 @@ Using not informative variable names might be problematic, because you or other 
 
 ### While loops
 
-An alternative to the "for loop" is the "while loop". A "while loop" tests for a condition at the top of a loop, 
-and keeps looping as long as that condition is met. In contrast to the "for loop", the "while 
-loop" is used in situations where the number of loop repetitions is not known beforehand.
+Another type of loop is the *while loop*. A *while loop* tests for a condition at the top of a loop, 
+and keeps looping as long as that condition is met. In contrast to the *for loop*, the *while 
+loop* is used in situations where the number of loop repetitions is not known beforehand.
 
-A simple while loop can be used to count a certain number of iterations:
+An example of a *while loop* is a follow:
 
 ```bash
 digit=1
 while [ $digit -le 5 ]
 do
-  echo "Welcome $digit times"
+  echo "Welcome guest number $digit"
   digit=$(( $digit + 1 ))
 done
 ```
 
-Let's breakdown the structure of this while loop:
+As in the case of the *for loop*, the `while` commands tells the computer that we are inside a loop. This type of loop is referred as a *while loop* an it also tells the computer that we want to execute a command multiple times.
 
-* `while`(command that starts the loop)
-* [ $x -le 5 ] (condition to be meet until the loop stops running. $digit assigns the previously defined digit to a variable, -le is a "comparison operator")
-* do (indicates the list of commands INSIDE THE LOOP that will run on each iteration) 
-* any command desired. In this case we used `echo`
-* digit=$(( $digit + 1 )) (adds one to the $x variable)
-* done (ends the commands INSIDE THE LOOP)
+Let's break down what is happening.
+
+1. This loop will run 5 times. In this case, the loop will be executed until the meet the established condition: that our variable is lower or equal than 5. <br>
+2. We define *digit* as a variable outside the loop, and then by using $digit we re-assign this variable on each loop iteration. -le is a *comparison operator* that we will use to make sure the variable is met<br>
+3. During each iteration, we reassign the variable and perform a task/command inside the loop in association with this variable. The *inside of the loop* is signaled by the command `do`.<br>
+4. The digit=$(( $digit + 1 )) portion of the loop adds one to the $digit variable.<br>
+5. Finally, the command `done` signals the end of the loop.
 
 Note that for comparisons between integers we need to use "a binary comparison operator". 
-These operators are used to compare two variables or quantities. In this case, we are running the 
-loop until our variable remains less or equal than 5. (Find more details about 
+These operators are used to compare two variables or quantities. I(Find more details about 
 different types of operators here: http://tldp.org/LDP/abs/html/comparison-ops.html)
 
-Let's create another while loop using a different operator:
+Now, let's take a moment to examine other loops. 
 
-```bash
-digit=10
-while [ $digit -ge 5 ]
-do
-  echo "Welcome $digit times"
-  digit=$(( $digit - 1 ))
-done
-```
+***Activity***<br>
+Run the `while_loop.sh` file on the command line and observed the output. Once you are familiar with it, start modifying the loop by doing the following. Tell us what is happening on each case on the etherpad:<br>
+a. Change the digit variable from 1 to 3. <br>
+b. Change the comparison operator from -le to -ge <br>
+c. Change the number of times the loop will run.<br> 
+d. Eliminate the digit=$(( $digit + 1 )). Do this last!<br>
 
-The -ge operator allows you to compare your variable to an integer. The "while loop" will run as long as your variable
-is lower or equal than five!
-
-Now, let's take a moment to explore how some of the components of the while loop work. Using the first while loop as an 
-example, modify the different sections of the loop and see what happens:
-
-* What happens if you change digit=1 for z=1 before starting the loop? Note: do not change "digit" anywhere else in the loop.
-* What happens if you eliminate the digit=$(( $digit + 1 )) portion of the loop?
 
 #### Killing an infinite loop
 
-Uh oh! We seem to have created an infinite loop. In the case of while loops, if the conditions to finish the loop
+Uh oh! We seem to have created an infinite loop by doing question "d". In the case of *while loops*, if the conditions to finish the loop
 are never met the loop will continue running until the user kills the process. If you find your self in this 
 position don't panic! You can end and kill a rogue while loop by pressing the following command on your terminal:
 
@@ -140,59 +136,35 @@ position don't panic! You can end and kill a rogue while loop by pressing the fo
 Ctrl+C
 ```
 
+***Etherpad question***<br>
+Go to the etherpad and explain the difference between *while loops* and *for loops* in one or two sentences. 
+
+
 ## Conditionals
 
-Conditional statements allow us to use our script to specify different courses of action when a certain condition is met. 
-The `if` statement is the most widely used conditional. The structure of an `if` conditional is as follows: 
+*Conditionals* allow us to control what happens on your script based on a condition. As in the case of many hypothesis,
+*conditionals* use `if` and `then` statements. The structure of an `if` condition is as follows:
 
-if CONDITION_IS_MET
-	then DO_SOMETHING
-fi 
+**if CONDITION_IS_MET<br>
+	then DO_SOMETHING<br>
+fi** 
 
-When the condition required by the `if` statement is met, the `then` command inside the statement will be executed.
-If the condition is not met, then the internal command will not be executed;. `fi` signals the end of the conditional. 
-Let's try this by performing a quick binary comparison between two integers 
+When the condition required by the `if` statement is met, the `then` command inside the statement is executed.
+If the condition is not met, then the internal command will not be executed. As is the case of *loops*, we need to indicate the end of the conditional. Here we will use `fi` to signal the end of the conditional. 
 
-```bash
-integer=1
-if [ "$integer" -eq 1 ]
-	then echo "$integer is equal to 1"
-fi
-```
+Let's run a conditional that compares two numbers: 
 
-* What happens if the condition is not met? e.g. integer=2
+***Activity***<br>
+Run the `conditional.sh` file on the command line and observed the output. Once you are familiar with it, change the *integer* variable from 1 to 2 (o any other number). What happened? Could we try for more than one condition?<br>
 
-We can add other conditionals to this statement. Besides using the "if/then" comparison we can capture an alternative 
-condition by using the `elif` and `else` conditionals. For example, we can built onto the previous code by doing the
-following:
+Yes! We can add other conditionals to this statement. Besides using the *if/then* comparison we can capture an alternative 
+condition by using `elif` and `else`. 
 
-```bash
-integer=2
-if [ "$integer" -eq 1 ]
-	then echo "$integer is equal to 1"
-elif [ "$integer" -eq 2 ]
-	then echo "$integer is equal to 2"
-else 
-	echo "$integer is different from 1 or 2"
-fi
-```
-
-* What is the expected output of the following loop?
-
-```bash
-integer=32
-if [ "$integer" -le 30 ]
-	then echo "$integer is lesser or equal than 30"
-else
-	echo "$integer is greater or equal than 30"
-fi
-```
-
-* Empty
-* 32 is lesser or equal than 30
-* 32 is greater or equal than 30
-
-Take a moment to create various if/then statements and familiarize yourself with their structure and usage.
+***Activity***<br>
+Run the `conditional_multiple.sh` file on the command line and observed the output. Once you are familiar with it, change the *integer* variable by doing the following:<br>
+a. Change *interger* from 1 to 2 and notice what happends.<br>
+b. Change *interger* from to to 3 and notice what happends.<br>
+c. Change *integer* from 3 to 32 and notice what happends.<br>
 
 
 ## Conditionals and loops
@@ -375,7 +347,7 @@ of the script's output changes?
 ### Debugging the script
 
 Even if we are carefull, it is possible that we make mistakes while writing our script. Running
-a script with an error (bug) will results on an empty output in our termina. In order to find
+a script with an error (bug) will results on an empty output in our terminal. In order to find
 any bugs in our script we need to use the -x flag to run bash in debug mode. Running a script in 
 debug more prints out each command as it is run, which will help to locate errors.
 
