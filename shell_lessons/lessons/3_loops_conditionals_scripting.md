@@ -30,12 +30,33 @@ Navigate to that folder using `cd` if you find yourself out of it.
 head -n 2 *.txt
 ```
 
+## The shell script
+
+We are going to use `nano` to examine, modify and alter some small scripts. By saving our commands on a script, we can re-run all them later by typing a single command. A file containing a series of commands is called a shell script. Shell scripts are identified by the ".sh" extension. 
+
+You can modify the file using nano by typing:
+
+```bash
+nano [FILENAME].sh
+```  
+
+Or you can run the file by typing:
+
+```bash
+bash [FILENAME].sh
+```
+or
+
+```bash
+sh [FILENAME].sh
+```
+
 ### Structure of a loop
 
 While we can type and execute a loop using the command line, it is more effective (and visualy pleasing) to use a text editor. Let's begin by examining the structure of a loop, as well as reviewing some concepts from the past lessons.
 
 ***Activity***<br>
-Find the `loop_intro.sh` file in your own computer and run the file using the following:
+Find the `loop_intro.sh` file in your own computer. Remember to run the file using the following:
 
 ```bash
 sh loop_intro.sh
@@ -176,111 +197,50 @@ we can examine and separate large amounts of data.<br>
 Run the `loops_and_conditionals.sh` file on the command line and observed the output. On particular notice the syntax and organization of this sample code. Take a few minutes to run some modifications on the code. For example, you can change the range of numbers at the start of the loop or the comparison operator<br>
 
 
-## Piping and saving to a file while inside a loop
+## Piping and saving to a file after using a loop
 
-As you might have figured out, loops are pretty versatile! Using the proper structure, you can include a variety
-of commands within the loop. You can even pipe commands within a loop!
+As you might have figured out, loops are pretty versatile! Using the proper structure, you can even pipe commands within a loop!
+
+***Activity***<br>
+Navigate to your gapminder_by_country folder and execute the `pipes_gapminder1.sh` and `pipes_gapminder2.sh` files by running:<br>
 
 ```bash
-for filename in U*.txt
-do
-    echo $filename
-    head -n 5 $filename | tail -n 3
-done
+sh ~/Desktop/pipes_gapminder1.sh
 ```
 
-Furthermore, by using the ">>" symbol, you can redirect the output from the loop onto a file.
+and 
 
 ```bash
-for filename in U*.txt
-do
-    echo $filename
-    head -n 2 $filename >> output_test.txt
-done
+sh ~/Desktop/pipes_gapminder2.sh
 ```
 
-* What do you expect to find on the output_test.txt file?
-* Where is the file located?
-* What would happend if you use ">" instead of ">>"?
+Note that you might need to modify the path to the file based on the file strcuture you have created.
 
-How would we redirect the file onto another location?
+Answer the following questions on the **Etherpad**:
+a. What does the pipes_gapminder1.sh files do?<br>
+b. What does the pipes_gapminder2.sh files do?<br>
+c. What do you expect to find on the output_test.txt file?<br>
+d. Where is the file located?<br>
 
-```bash
-for filename in U*.txt
-do
-    echo $filename
-    cat $filename >> output_test.txt
-done
+***Activity***<br>
+Using nano, modify `pipes_gapminder3.sh` to redirect the output file onto your desktop
+Hint: You should use the `mv` command outside/ after the loop is finished. 
 
-mv output_test.txt ~/Desktop/
-```
-
-Notice that we are using the `mv` command outside/ after our loop is finished. 
-* What would happend if we use the `mv` command inside the loop?
-
-## Putting all together, the shell script
-
-Now that we are familiar with some of the properties and capabilities of the shell
-we are going to take some commands that we repeat frequently and save them in a file 
-so that we can re-run all them later by typing a single command. A file containing a 
-series of commands is called a shell script.
-
-We will be using the text editor `nano` to build our shell scripts.
-
-First, we can access `nano` by typing "nano" on the terminal window.
-
-```bash
-nano
-```
-
-We can type any of the bash commands within the text editor. Let's practice creating a
-loop that will capture the name of certain file within the gapminder_by_country dataset
-and some information within each file:
-
-```bash
-for filename in V*.txt
-do
-    echo $filename
-    head -5 $filename | tail -2 $filename
-done
-```
-Notice that contrary to when we use the terminal, we can type the complete loop inside nano. 
-In order to make these command easy to read for the human eye, we will include indentations.
-
-Once you have finished typing, you close nano by pressing Ctrl+X, followed
-by Y to indicate that you will like to save the changes made. Use an indicative file name
-(remember to avoid using non indicative names for files and/or variables) followed by the ".sh" extension. 
-The ".sh" will stands for shell script.
-
-You can further modify the file using nano from the terminal by typing:
-
-```bash
-nano V_countries_loop.sh
-```  
-
-In order to execute your script, you should type the following in the terminal:
-
-```bash
-bash V_countries_loop.sh
-```
-Executing the script will provide the same results as typing these individual commands in the 
-terminal; however, you have the advantage that these commands are compiled and ready to use
-with other data.
-
+***FIVE MINUTES BREAK***
 
 ### Adding comments to your shell script
 
 Adding comments to your script is essencial to secure its future usability and sharing potential.
-Without comments, it can be difficult to recall the functions of a given line of code or understand
-the scripts shared with collaborator. Thus, it is customary to add comments that explain the 
+Without comments, it can be difficult to recall the function of a given line of code or understand
+scripts shared with collaborator. Thus, it is customary to add comments that explain the 
 actions of certain parts of the script.
 
-You can add comments to your script by opening nano.
+You can add comments to your script by using nano.
 
-Comments are marked by the use of the `#` character. They represent something that a HUMAN USER
+Comments are marked by the use of the `#` character. They represent something that a **HUMAN USER**
 can read and understand. The computer ignores lines of code preceded by the `#` character.
 
-A commented script looks as follows:
+The commented `pipes_gapminder1.sh` script looks as follows:
 
 ```bash
 #Loop through files that start with a V
@@ -290,9 +250,11 @@ do
     head -5 $filename | tail -2  # Pipes the first 5 lines within the file, and prints the last two lines
 done
 ```
-
 Running the updated code will produce the same output as before. However, now our script
 is more easy to use by other people as well as our future selfs!
+
+***Activity***<br>
+Using nano, add comments to the `pipes_gapminder2.sh` and `pipes_gapminder3.sh` files. Show this comments to the person next to you to make sure that they can read them and understand them
 
 ### Using the script with arbitrary files:
 
