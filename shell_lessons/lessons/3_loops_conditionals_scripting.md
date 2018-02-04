@@ -1,7 +1,35 @@
 # Lesson 3
 
-## Looping through multiple files
-### Why use loops
+## The shell script
+
+We are going to use `nano` to examine, modify and alter some small scripts. By saving our commands on a script, we can re-run all them later by typing a single command. A file containing a series of commands is called a shell script. Shell scripts are identified by the ".sh" extension. 
+
+You can modify the file using nano by typing:
+
+```bash
+nano [FILENAME].sh
+```  
+
+Or you can run the file by typing:
+
+```bash
+bash [FILENAME].sh
+```
+or
+
+```bash
+sh [FILENAME].sh
+```
+
+### Enabling executable capabilities to the script
+
+We can allow everyone to execute our scripts by using the chmod command (change mode) is the command line. This command can be used to change file system modes/permissions of files and directories. Each shell script must have the execute permission. To enable executables in our scripts we use:
+
+```bash
+chmod +x script.sh
+```
+
+## Why use loops
 
 Let's start with an question. What would you do if you wanted to check the number of words in a file using the command line?
 
@@ -30,28 +58,7 @@ Navigate to that folder using `cd` if you find yourself out of it.
 head -n 2 *.txt
 ```
 
-## The shell script
-
-We are going to use `nano` to examine, modify and alter some small scripts. By saving our commands on a script, we can re-run all them later by typing a single command. A file containing a series of commands is called a shell script. Shell scripts are identified by the ".sh" extension. 
-
-You can modify the file using nano by typing:
-
-```bash
-nano [FILENAME].sh
-```  
-
-Or you can run the file by typing:
-
-```bash
-bash [FILENAME].sh
-```
-or
-
-```bash
-sh [FILENAME].sh
-```
-
-### Structure of a loop
+## Structure of a loop
 
 While we can type and execute a loop using the command line, it is more effective (and visualy pleasing) to use a text editor. Let's begin by examining the structure of a loop, as well as reviewing some concepts from the past lessons.
 
@@ -106,7 +113,7 @@ b. What is different between these loops? <br>
 Using not informative variable names might be problematic, because you or other people looking at your code, might not know what the variable is referring to. **Avoid this issue by using variable names that are indicative and pertinent to the situation**  
 
 
-### While loops
+## While loops
 
 Another type of loop is the *while loop*. A *while loop* tests for a condition at the top of a loop, 
 and keeps looping as long as that condition is met. In contrast to the *for loop*, the *while 
@@ -147,7 +154,7 @@ c. Change the number of times the loop will run.<br>
 d. Eliminate the digit=$(( $digit + 1 )). Do this last!<br>
 
 
-#### Killing an infinite loop
+### Killing an infinite loop
 
 Uh oh! We seem to have created an infinite loop by doing question "d". In the case of *while loops*, if the conditions to finish the loop
 are never met the loop will continue running until the user kills the process. If you find your self in this 
@@ -228,7 +235,7 @@ Hint: You should use the `mv` command outside/ after the loop is finished.
 
 ***FIVE MINUTES BREAK***
 
-### Adding comments to your shell script
+## Adding comments to your shell script
 
 Adding comments to your script is essencial to secure its future usability and sharing potential.
 Without comments, it can be difficult to recall the function of a given line of code or understand
@@ -256,7 +263,7 @@ is more easy to use by other people as well as our future selfs!
 ***Activity***<br>
 Using nano, add comments to the `pipes_gapminder2.sh` and `pipes_gapminder3.sh` files. Show this comments to the person next to you to make sure that they can read them and understand them
 
-### Using the script with arbitrary files:
+## Using the script with arbitrary files:
 
 Alternatively, we can make our script more versatile by chanding our use of variables. For example,
 we can let the user specify which data file they want to use by changing the variable name to "$1".
@@ -296,7 +303,7 @@ bash first_argument_sh Italy.cc.txt 4 1
 Try running the script while modifying the arguments in the terminal. Does the behaviour
 of the script's output changes?
 
-### Debugging the script
+## Debugging the script
 
 Even if we are carefull, it is possible that we make mistakes while writing our script. Running
 a script with an error (bug) will results on an empty output in our terminal. In order to find
@@ -307,7 +314,7 @@ debug more prints out each command as it is run, which will help to locate error
 bash -x first_argument_sh Italy.cc.txt 4 1
 ```
 
-### Final shell exercise
+# Final shell exercise
 
 Now, we will create a final shell script that works on the gapminder data set. 
 
