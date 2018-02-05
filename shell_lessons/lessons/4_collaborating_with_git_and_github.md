@@ -197,6 +197,16 @@ git merge my_branch
 
 Now, you should have merged changes done on your own branch to the master/main branch on the repo. Great job!
 
+### Deleting your old branch
+
+```bash
+#Delete local branch
+git branch -d [local_branch_name]
+
+#Delete remote branch
+git push origin --delete [branch_name]
+```
+
 ## Forking (Github only)
 
 Forking is *not* done in git. It is a Github function! Forking means you have taken an existing repository and placed an exact copy into your own Github account and repository. This then allows you to clone this fork to your local machine and make any changes you wish.  For example, you may be interested in a project you are not a part of and have some neat ideas you would like to add. In this case you would fork the Github repository and clone it to your machine and add the code you think will make the project better. At this point you would add, commit, and push back to your Github remote repository.  When you are ready to share it with the original project you would send a Pull Request. This request can be confirmed, denied, or the owner of the original repository may ask for edits.  
