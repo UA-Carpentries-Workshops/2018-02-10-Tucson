@@ -19,11 +19,12 @@ Notice that there could be some small differences between our own screen (the di
 Because the command line looks cryptic there are two things you can always do to orient yourself. `pwd` Stands for Print Working Directory and shows the root to the current directory you are in from left to right. Directories are indicated in the command line by a `/`.  The second command is `whoami` and will output the current user. 
 
 ```bash
-pwd
-```
-```bash
 whoami
 ```
+```bash
+pwd
+```
+
 
 **The file structure shown using `pwd` can be thought of as a tree of files with branches and nodes.**
 
@@ -128,7 +129,29 @@ Create a file in your current directory and write a one verse poem in that file.
 We can also copy, move and remove files and directories.
 
 ```bash
-cp -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
-mv -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 rm -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
+mv -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
+cp -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 ```
+
+#### Activity
+
+What is the output of the closing ls command in the sequence shown below?
+
+```bash
+$ pwd
+/Users/jamie/data
+
+$ ls
+proteins.dat
+
+$ mkdir recombine
+$ mv proteins.dat recombine
+$ cp recombine/proteins.dat ../proteins-saved.dat
+$ ls
+```
+1.proteins-saved.dat recombine
+2.recombine
+3.proteins.dat recombine
+4.proteins-saved.dat
+
