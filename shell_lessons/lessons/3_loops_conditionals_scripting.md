@@ -104,14 +104,7 @@ b. Why do we need to change the path to the `loop_structure.sh` file?<br>
 
 ***Activity***<br>
 Take a moment to modify this or the previous file. Test and evaluate different possibilities by changing different elements of the loop. Report any questions or interesting finding onto the etherpad.
-
-***Etherpad question***<br>
-Run the `loop_question1.sh` and `loop_question2.sh` files on the command line and answer the following questions. <br>
-a. What is the output? <br>
-b. What is different between these loops? <br>
- 
-Using not informative variable names might be problematic, because you or other people looking at your code, might not know what the variable is referring to. **Avoid this issue by using variable names that are indicative and pertinent to the situation**  
-
+  
 ## Piping and saving to a file after using a loop
 
 As you might have figured out, loops are pretty versatile! Using the proper structure, you can even pipe commands within a loop!
@@ -233,6 +226,14 @@ Run the `loops_and_conditionals.sh` file on the command line and observed the ou
 
 
 ***FIVE MINUTES BREAK***
+
+## Using adequate variable names
+***Etherpad question***<br>
+Run the `loop_question1.sh` and `loop_question2.sh` files on the command line and answer the following questions. <br>
+a. What is the output? <br>
+b. What is different between these loops? <br>
+ 
+Using not informative variable names might be problematic, because you or other people looking at your code, might not know what the variable is referring to. **Avoid this issue by using variable names that are indicative and pertinent to the situation**
 
 ## Adding comments to your shell script
 
