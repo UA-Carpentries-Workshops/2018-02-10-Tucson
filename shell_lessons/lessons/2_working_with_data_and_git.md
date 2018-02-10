@@ -9,7 +9,12 @@ Usage of the command line also allows us to use a version control application ca
 ![Version Control PhD Comics](http://swcarpentry.github.io/git-novice/fig/phd101212s.png)
 
 
-First we need to acquire the data we will be using today and tomorrow using git.  For this we will clone a repository with `git clone`.  When using any git commands we first call `git` followed by the specific command, `clone` in this case.
+First we need to acquire the data we will be using today and tomorrow using `git`.  For this we will clone a repository with `git clone`.  When using any git commands we first call `git` followed by the specific command, `clone` in this case.
+
+If you ever need to access a git help page follow this method
+```bash
+git [command] --help
+```
 
 Clone the repository for this workshop to collect the data.  Feel free to download this wherever you like.  We will be copying all the data files into our `data/` directory and deleting this cloned repository.
 
@@ -21,8 +26,10 @@ git clone https://github.com/UA-Carpentries-Workshops/2018-02-10-Tucson.git
 
 Copy the gapminder_by_country directory and the Afghanistan_raw.xlsx file only using the command line!
 
+*Hint: `cp` cannot copy directories in its default usage.*
+
 ### Open source software and Github
-Before we start working with any of this data we will use git to begin tracking our changes.  Note that `git` is a software application while Github is a website.  The website Github is commonly used with git and is a hosting server for git.  Github allows users to store their version controlled software and data files on their servers while also creating an open source develop community where people can access code to hopefully make better!  For this reason, Github is an excellent place for the development of large projects due to its centralized version control capabilities and global access.
+Before we start working with any of this data we will use git to begin tracking our changes.  Note that `git` is a software application while Github is a website.  The website Github is commonly used with git and is a hosting server for git.  Github allows users to store their version controlled software and data files on their servers while also creating an open source develop community where people can access code to hopefully make that code better!  For this reason, Github is an excellent place for the development of large projects due to its centralized version control capabilities and global access.
 
 Please take the time to make a Github account at [github.com](https://github.com/) if you have not yet already.  We will need to feed our Github information into git.
 
@@ -37,7 +44,11 @@ Next we need to initialize our repository so git knows to start tracking changes
 
 
 ```bash
+ls -a
+
 git init .
+
+ls -a
 ```  
 
 
@@ -72,13 +83,14 @@ git status #tells us what files have changed
 
 or
 
-git diff #tells us what has changed
+git diff --staged #tells us what has changed
+git diff HEAD~1
 ```
 
 
 The point of staging is to prep ONLY the files that need to be sent to Github.  Imagine we are working on a large project where many files have been changed but only a few have current bugs.  We want to select only the files that had bugs and have now been fixed to be sent to others for use or develop.  
 
-**Staging allows us to be specific about which altered files we want to send into the world.**  
+## **Staging allows us to be specific about which altered files we want to send into the world.**  
 
 ### Committing files
 
@@ -92,9 +104,11 @@ git commit -m "Updated a login bug"
 Run a git status.  What happened to our added files?
 
 To see the changes made within our commit files we have to use a different command than git diff.
+Note: git diff can be called with two commit hashes for comparison as well eg. `git diff 820128fhsagd01 827610shufj92`
 
 ```bash
 git show
+git show HEAD~1
 ```
 
 After commits have been made we look at commit information or we can also visualize a tree of commit information using `git log`
@@ -102,6 +116,11 @@ After commits have been made we look at commit information or we can also visual
 ```bash
 git log
 git log --graph --decorate --all
+```
+
+Using log to find a hash of interest we could call a specific commit.
+```bash
+git show [id_hash]
 ```
 
 ### Setting up a Remote Repo on Github
@@ -140,6 +159,7 @@ Staging    =
 Committing = 
 Pushing    =
 
+### **Edit the small nano file from lesson one to demonstrate tracking changes using a smaller file as an example.**
 
 ## Working with Data
 
