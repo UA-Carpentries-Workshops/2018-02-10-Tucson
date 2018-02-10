@@ -216,7 +216,7 @@ Yes! We can add other conditionals to this statement. Besides using the *if/then
 condition by using `elif` and `else`. 
 
 ***Activity***<br>
-Run the `conditional_multiple.sh` file on the command line and observed the output. Once you are familiar with it, change the *integer* variable by doing the following:<br>
+Run the `conditionals_multiple.sh` file on the command line and observed the output. Once you are familiar with it, change the *integer* variable by doing the following:<br>
 a. Change *interger* from 1 to 2 and notice what happends.<br>
 b. Change *interger* from to to 3 and notice what happends.<br>
 c. Change *integer* from 3 to 32 and notice what happends.<br>
