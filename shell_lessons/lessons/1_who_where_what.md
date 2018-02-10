@@ -84,7 +84,7 @@ c. mkdir<br>
 d. cd<br>
 
 ### *Viewing and Working With Files*
-There are a variety of ways to view files. We will use a few of these methods to understand how they differ from each other. We will download a text file to the data directory. Download the file [here](https://github.com/UA-Carpentries-Workshops/2018-02-10-Tucson/blob/shell_lessons/shell_lessons/data/the_road_not_taken.txt). 
+There are a variety of ways to view files. We will use a few of these methods to understand how they differ from each other. We will download a text file to the data directory. Download the file [here](https://github.com/UA-Carpentries-Workshops/2018-02-10-Tucson/blob/master/shell_lessons/data/the_road_not_taken.txt). 
 
 **Viewing the content inside a file**
 ```bash
@@ -97,6 +97,9 @@ tail [-number] [PATH/]FILENAME
 **Writing to a file**
 ```bash
 file1 > file2	  write to a file
+
+vs.
+
 file1 >> file2  append to a file
 ```
 **Pipes**
@@ -111,7 +114,14 @@ c. wc<br>
 d. tail<br>
 
 *Etherpad question*<br>
-On the etherpad, write a single line of code to count the number of words on the first three lines of a conuntry file. You can try this code on your own computer and see what happends.
+Extract the following stanza into a file called 'second_stanza.txt' using the command line. Write your code into the Etherpad
+
+Then took the other, as just as fair,
+And having perhaps the better claim,
+Because it was grassy and wanted wear;
+Though as for that the passing there
+Had worn them really about the same,
+
 
 ### *Creating a new file*
 Now we will create a file. You can create and empty file by using the command `touch` and use a text editor to change it. 
@@ -129,6 +139,8 @@ Create a file in your current directory and write a one verse poem in that file.
 We can also copy, move and remove files and directories.
 
 ```bash
+#Do w/ and w/o -i flag
+
 rm -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 mv -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 cp -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
@@ -136,7 +148,7 @@ cp -i [PATH/]SUBJECT_NAME [PATH/]NEW_TARGET_NAME
 
 #### Activity
 
-What is the output of the closing ls command in the sequence shown below?
+What is the output of the closing `ls` command in the sequence shown below?
 
 ```bash
 $ pwd
@@ -150,8 +162,8 @@ $ mv proteins.dat recombine
 $ cp recombine/proteins.dat ../proteins-saved.dat
 $ ls
 ```
-1.proteins-saved.dat recombine
-2.recombine
-3.proteins.dat recombine
+1.proteins-saved.dat recombine<br>
+2.recombine<br>
+3.proteins.dat recombine<br>
 4.proteins-saved.dat
 

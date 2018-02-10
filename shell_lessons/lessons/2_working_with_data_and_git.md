@@ -132,6 +132,8 @@ git push
 
 Now go to your Github account in a browser and see if our repository was pushed correctly.
 
+Where is our data?
+
 #### Activity
 What is the difference between staging, committing, and pushing?
 Staging    =
@@ -190,8 +192,6 @@ wc -l *
 
 #### Activity
 Pick a country with your the first letter of your last name.  Put that country into the Etherpad along with your name and inspect the file with the country chosen for any errors.  Report any errors to the Etherpad. If you finish early pick a remaining country and inspect that file as well. 
-
-**Countries with multiple words in their name should be spaced using underscores(eg. United States -> United_States)**
 
 The Etherpad should look like
 
