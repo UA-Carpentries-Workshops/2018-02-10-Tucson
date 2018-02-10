@@ -154,9 +154,9 @@ Now go to your Github account in a browser and see if our repository was pushed 
 Where is our data?
 
 #### Activity
-What is the difference between staging, committing, and pushing?
-Staging    =
-Committing = 
+What is the difference between staging, committing, and pushing?<br>
+Staging    =<br>
+Committing =<br>
 Pushing    =
 
 ### **Edit the small nano file from lesson one to demonstrate tracking changes using a smaller file as an example.**
