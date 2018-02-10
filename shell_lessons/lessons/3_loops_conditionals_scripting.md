@@ -267,7 +267,7 @@ Using nano, add comments to the `pipes_gapminder2.sh` and `pipes_gapminder3.sh` 
 We can also make our script more versatile by chanding our use of variables. For example,
 we can let the user specify which data file they want to use by changing the variable name to "$1".
 Inside a shell script, $1 means "the first filename (or other argument) on the command line". 
-For example, the following script:
+For example, the firs_argument.sh script:
 
 ```bash
 #Runs script with first argument given in the command line
