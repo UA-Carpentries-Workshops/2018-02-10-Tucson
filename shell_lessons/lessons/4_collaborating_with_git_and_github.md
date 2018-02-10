@@ -32,7 +32,7 @@ the *Collaborator*. The goal is that the Collaborator add changes into the Owner
 We will switch roles during this lesson, so both persons will play *Owner* and *Collaborator*. Also we will use both the command line/terminal and the web UI interface to observe how the changes in github are tracked.
 
 ***Follow these steps in order***<br>
-1) Provide access to each other by clicking on the settings button on the right of the web UI interface, then select Collaborators, and enter your partner’s username.
+1) Provide access by clicking on the settings button on the right of the web UI interface, then select Collaborators, and enter your partner’s username.
 
 2) To accept access to the Owner’s repo, the Collaborator needs to go to https://github.com/notifications and accept access to the Owner’s repo. You will get an email with the invitation to collaborate.
 
