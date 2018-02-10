@@ -148,10 +148,9 @@ Now, let's take a moment to examine other loops.
 
 ***Activity***<br>
 Run the `while_loop.sh` file on the command line and observed the output. Once you are familiar with it, start modifying the loop by doing the following. Tell us what is happening on each case on the etherpad:<br>
-a. Change the digit variable from 1 to 10. <br>
-b. Change the comparison operator from -le to -ge and digit=$(( $digit + 1 )) to digit=$(( $digit - 1 ))<br>
-c. Change the number of times the loop will run.<br> 
-d. Eliminate the digit=$(( $digit + 1 )). Do this last!<br>
+a. Change the digit variable from 1 to 3. <br>
+b. Change the comparison operator from -le to -ne<br>
+c. Eliminate the digit=$(( $digit + 1 )). Do this last!<br>
 
 
 ### Killing an infinite loop
