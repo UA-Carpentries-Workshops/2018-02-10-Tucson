@@ -116,10 +116,10 @@ d. tail<br>
 *Etherpad question*<br>
 Extract the following stanza into a file called 'second_stanza.txt' using the command line. Write your code into the Etherpad
 
-Then took the other, as just as fair,
-And having perhaps the better claim,
-Because it was grassy and wanted wear;
-Though as for that the passing there
+Then took the other, as just as fair,<br>
+And having perhaps the better claim,<br>
+Because it was grassy and wanted wear;<br>
+Though as for that the passing there<br>
 Had worn them really about the same,
 
 
