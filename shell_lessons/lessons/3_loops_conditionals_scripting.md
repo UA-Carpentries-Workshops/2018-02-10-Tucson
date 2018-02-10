@@ -112,6 +112,34 @@ b. What is different between these loops? <br>
  
 Using not informative variable names might be problematic, because you or other people looking at your code, might not know what the variable is referring to. **Avoid this issue by using variable names that are indicative and pertinent to the situation**  
 
+## Piping and saving to a file after using a loop
+
+As you might have figured out, loops are pretty versatile! Using the proper structure, you can even pipe commands within a loop!
+
+***Activity***<br>
+Navigate to your gapminder_by_country folder and execute the `pipes_gapminder1.sh` and `pipes_gapminder2.sh` files by running:<br>
+
+```bash
+sh ~/Desktop/pipes_gapminder1.sh
+```
+
+and 
+
+```bash
+sh ~/Desktop/pipes_gapminder2.sh
+```
+
+Note that you might need to modify the path to the file based on the file strcuture you have created.
+
+Answer the following questions on the **Etherpad**:<br>
+a. What does the pipes_gapminder1.sh files do?<br>
+b. What does the pipes_gapminder2.sh files do?<br>
+c. What do you expect to find on the output_test.txt file?<br>
+d. Where is the file located?<br>
+
+***Activity***<br>
+Using nano, modify `pipes_gapminder3.sh` to redirect the output file onto your desktop
+Hint: You should use the `mv` command outside/ after the loop is finished. 
 
 ## While loops
 
@@ -203,34 +231,6 @@ we can examine and separate large amounts of data.<br>
 Run the `loops_and_conditionals.sh` file on the command line and observed the output. On particular notice the syntax and organization of this sample code. Take a few minutes to run some modifications on the code. For example, you can change the range of numbers at the start of the loop or the comparison operator<br>
 
 
-## Piping and saving to a file after using a loop
-
-As you might have figured out, loops are pretty versatile! Using the proper structure, you can even pipe commands within a loop!
-
-***Activity***<br>
-Navigate to your gapminder_by_country folder and execute the `pipes_gapminder1.sh` and `pipes_gapminder2.sh` files by running:<br>
-
-```bash
-sh ~/Desktop/pipes_gapminder1.sh
-```
-
-and 
-
-```bash
-sh ~/Desktop/pipes_gapminder2.sh
-```
-
-Note that you might need to modify the path to the file based on the file strcuture you have created.
-
-Answer the following questions on the **Etherpad**:<br>
-a. What does the pipes_gapminder1.sh files do?<br>
-b. What does the pipes_gapminder2.sh files do?<br>
-c. What do you expect to find on the output_test.txt file?<br>
-d. Where is the file located?<br>
-
-***Activity***<br>
-Using nano, modify `pipes_gapminder3.sh` to redirect the output file onto your desktop
-Hint: You should use the `mv` command outside/ after the loop is finished. 
 
 ***FIVE MINUTES BREAK***
 
